@@ -1,0 +1,60 @@
+language: java
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+    - os: osx
+      osx_image: xcode9.4
+before_install:
+  - >
+    case "${TRAVIS_OS_NAME:-linux}" in
+    linux)
+      sudo apt-get update -qq
+      sudo apt-get install -qq fakeroot
+      curl https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2018q2/gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2 -o gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2
+      tar xfj gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2 -C platform_linux/
+      rm gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2
+      curl https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/java-1.8.0-amazon-corretto-jdk_8.232.09-1_amd64.deb > java-1.8.0-amazon-corretto-jdk_8.232.09-1_amd64.deb
+      sudo dpkg -i java-1.8.0-amazon-corretto-jdk_8.232.09-1_amd64.deb
+      rm java-1.8.0-amazon-corretto-jdk_8.232.09-1_amd64.deb
+      export JAVA_HOME="/usr/lib/jvm/java-1.8.0-amazon-corretto"
+      ./platform_linux/build.sh --noninteractive
+      ;;
+    osx)
+      brew update
+      brew install ant p7zip
+      curl https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2018q2/gcc-arm-none-eabi-7-2018-q2-update-mac.tar.bz2 -o gcc-arm-none-eabi-7-2018-q2-update-mac.tar.bz2
+      tar xfj gcc-arm-none-eabi-7-2018-q2-update-mac.tar.bz2 -C /Applications/
+      rm gcc-arm-none-eabi-7-2018-q2-update-mac.tar.bz2
+      curl https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon-corretto-8.232.09.1-macosx-x64.pkg > amazon-corretto-8.232.09.1-macosx-x64.pkg
+      sudo installer -pkg amazon-corretto-8.232.09.1-macosx-x64.pkg -target /
+      export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
+      rm amazon-corretto-8.232.09.1-macosx-x64.pkg
+      ./platform_osx/build.sh
+      ;;
+    esac;
+    javac -version;
+script:
+  - ant
+  - ant check_fw
+  - ant -Dbuild.bundle=true bundle
+before_deploy:
+  - pwd
+  - ls ${TRAVIS_BUILD_DIR}
+  - ls ${TRAVIS_BUILD_DIR}/build
+  - ls ${TRAVIS_BUILD_DIR}/build/bundles
+deploy:
+  provider: releases
+  api_key:
+    secure: so5vDC0HnVbw6tmKq0ASqYZpNa5PZzVoC9eDTKkMfafoJUimom9D9nPUXIFmqq3ZBMQLZSxmQTaA2jATydv8gaRfHf/MtMSkpSjNFkyrUQtuSEPiMcmJ4F/ROlFKn6OZdInWcyCF/kswYxwCuZP1rzvSV/Vm9Zl3JogbLOtgvAdJYpUpWk/Q8UjgppirNr/oKDEXk/qB0td8ri9TUTvhLKKslqpn6Zv92Sk0gU+rp74YoyDxQD8yWiCMZoJ3bmQziBP2jFoK5vGK7sKGjpea3duVTjGi/GbzDJkUJyyyFjksK+8c8nu+1uv8TUC7yJHms3Rek5zjk4cBCLYKV/tcnMtv+Lpc7v/zRGMg+SFVk9VImS5HNJDyqeFdzxZ5t3ilHNzPPef0odaqRievhMDhSBxJd380YDnmV+HtSpnSWE6I412oWa2e4F+objz9/OKOFMUABGf03izni1riagVylekwHUBIqwE7ebIexQMzbbmsIc1Rkq/0+zHARJIPdYQvVK5t0oes9WFzAGkwRdUrH32da94XxV2VpqT3JlmF3XEMay3uIjx/s1mewV97t+QfLqeXy1zE38oHaAAX20fFdthcJe149BXqOrVolVCLVghcCNv9FutotYmX9bMJN4xl+3EyAnjcf/2yU2TP55DZABFP1KsHW3aS8c/icuWVvW0=
+  file: 
+    - build/bundles/*
+    - build/runtime/*/axo_runtime*
+  file_glob: true  
+  skip_cleanup: true
+  on:
+    repo: axoloti/axoloti
+    tags: true
+    all_branches: true
+git:
+    depth: 1000

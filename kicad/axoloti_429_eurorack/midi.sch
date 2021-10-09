@@ -1,0 +1,297 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 9
+Title ""
+Date "2021-07-14"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Diode:1N4148 D2
+U 1 1 5EE31190
+P 6275 5000
+AR Path="/5EE2DB57/5EE31190" Ref="D2"  Part="1" 
+AR Path="/5F736ED6/5EE31190" Ref="D?"  Part="1" 
+F 0 "D2" V 6229 5080 50  0000 L CNN
+F 1 "1N4148" V 6320 5080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6275 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6275 5000 50  0001 C CNN
+	1    6275 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6275 5200 6275 5150
+Wire Wire Line
+	6625 4800 6275 4800
+Wire Wire Line
+	6275 4800 6275 4850
+$Comp
+L Device:R R26
+U 1 1 5EE33166
+P 5875 4800
+AR Path="/5EE2DB57/5EE33166" Ref="R26"  Part="1" 
+AR Path="/5F736ED6/5EE33166" Ref="R?"  Part="1" 
+F 0 "R26" V 5775 4800 50  0000 C CNN
+F 1 "220" V 5875 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5805 4800 50  0001 C CNN
+F 3 "~" H 5875 4800 50  0001 C CNN
+	1    5875 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6025 4800 6275 4800
+Connection ~ 6275 4800
+Wire Wire Line
+	5775 5000 5775 5200
+Wire Wire Line
+	5775 5200 6275 5200
+Connection ~ 6275 5200
+$Comp
+L power:GND #PWR036
+U 1 1 5EE3A369
+P 7425 5500
+AR Path="/5EE2DB57/5EE3A369" Ref="#PWR036"  Part="1" 
+AR Path="/5F736ED6/5EE3A369" Ref="#PWR?"  Part="1" 
+F 0 "#PWR036" H 7425 5250 50  0001 C CNN
+F 1 "GND" H 7430 5327 50  0000 C CNN
+F 2 "" H 7425 5500 50  0001 C CNN
+F 3 "" H 7425 5500 50  0001 C CNN
+	1    7425 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 5200 7325 5200
+Wire Wire Line
+	7425 5200 7425 5500
+Wire Wire Line
+	7325 4800 7425 4800
+$Comp
+L Device:R R29
+U 1 1 5EE45075
+P 5125 3050
+AR Path="/5EE2DB57/5EE45075" Ref="R29"  Part="1" 
+AR Path="/5F736ED6/5EE45075" Ref="R?"  Part="1" 
+F 0 "R29" V 5025 3125 50  0000 R CNN
+F 1 "220" V 5125 3125 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5055 3050 50  0001 C CNN
+F 3 "~" H 5125 3050 50  0001 C CNN
+	1    5125 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 5EE46100
+P 5625 3350
+AR Path="/5EE2DB57/5EE46100" Ref="J5"  Part="1" 
+AR Path="/5F736ED6/5EE46100" Ref="J?"  Part="1" 
+F 0 "J5" H 5597 3374 50  0000 R CNN
+F 1 "MIDI_OUT" H 5597 3283 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5625 3350 50  0001 C CNN
+F 3 "~" H 5625 3350 50  0001 C CNN
+	1    5625 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5125 3200 5125 3250
+$Comp
+L Device:R R28
+U 1 1 5EE499CC
+P 4725 3450
+AR Path="/5EE2DB57/5EE499CC" Ref="R28"  Part="1" 
+AR Path="/5F736ED6/5EE499CC" Ref="R?"  Part="1" 
+F 0 "R28" V 4800 3450 50  0000 C CNN
+F 1 "220" V 4725 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4655 3450 50  0001 C CNN
+F 3 "~" H 4725 3450 50  0001 C CNN
+	1    4725 3450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4325 3450 0    50   Input ~ 0
+MIDI_TX
+Wire Wire Line
+	4325 3450 4575 3450
+NoConn ~ 7325 4900
+$Comp
+L power:GND #PWR038
+U 1 1 5EE4E2E6
+P 5225 3600
+AR Path="/5EE2DB57/5EE4E2E6" Ref="#PWR038"  Part="1" 
+AR Path="/5F736ED6/5EE4E2E6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR038" H 5225 3350 50  0001 C CNN
+F 1 "GND" H 5230 3427 50  0000 C CNN
+F 2 "" H 5225 3600 50  0001 C CNN
+F 3 "" H 5225 3600 50  0001 C CNN
+	1    5225 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5225 3600 5225 3350
+Wire Wire Line
+	5225 3350 5425 3350
+Text Notes 5075 4800 0    50   ~ 0
+pin4 of DIN
+Text Notes 5075 5000 0    50   ~ 0
+pin5 of DIN
+Text Notes 5375 3550 0    50   ~ 0
+pin5 of DIN
+Text Notes 5375 3200 0    50   ~ 0
+pin4 of DIN
+Wire Wire Line
+	5125 2750 5125 2900
+$Comp
+L power:+5V #PWR0103
+U 1 1 60ED6983
+P 7425 4700
+F 0 "#PWR0103" H 7425 4550 50  0001 C CNN
+F 1 "+5V" H 7440 4873 50  0000 C CNN
+F 2 "" H 7425 4700 50  0001 C CNN
+F 3 "" H 7425 4700 50  0001 C CNN
+	1    7425 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 4700 7425 4800
+NoConn ~ 4975 4900
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 5EE3734F
+P 4775 4900
+AR Path="/5EE2DB57/5EE3734F" Ref="J4"  Part="1" 
+AR Path="/5F736ED6/5EE3734F" Ref="J?"  Part="1" 
+F 0 "J4" H 4883 5181 50  0000 C CNN
+F 1 "MIDI_IN" H 4883 5090 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4775 4900 50  0001 C CNN
+F 3 "~" H 4775 4900 50  0001 C CNN
+	1    4775 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR032
+U 1 1 610A36BA
+P 5125 2750
+F 0 "#PWR032" H 5125 2600 50  0001 C CNN
+F 1 "+5V" H 5140 2923 50  0000 C CNN
+F 2 "" H 5125 2750 50  0001 C CNN
+F 3 "" H 5125 2750 50  0001 C CNN
+	1    5125 2750
+	1    0    0    -1  
+$EndComp
+Text Notes 5450 1600 0    79   ~ 0
+MIDI IN/OUT
+$Comp
+L Connector:DIN-5_180degree J7
+U 1 1 61506F75
+P 6400 3375
+F 0 "J7" H 6400 3008 50  0000 C CNN
+F 1 "DIN-5_180degree" H 6400 3099 50  0000 C CNN
+F 2 "lib:CUI_SD-50BV" H 6400 3375 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 6400 3375 50  0001 C CNN
+	1    6400 3375
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5125 3250 5350 3250
+Wire Wire Line
+	4875 3450 5350 3450
+$Comp
+L power:GND #PWR0104
+U 1 1 61509A8D
+P 6775 3375
+AR Path="/5EE2DB57/61509A8D" Ref="#PWR0104"  Part="1" 
+AR Path="/5F736ED6/61509A8D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0104" H 6775 3125 50  0001 C CNN
+F 1 "GND" H 6780 3202 50  0000 C CNN
+F 2 "" H 6775 3375 50  0001 C CNN
+F 3 "" H 6775 3375 50  0001 C CNN
+	1    6775 3375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6775 3375 6700 3375
+Wire Wire Line
+	5350 3250 5350 2925
+Wire Wire Line
+	5350 2925 6500 2925
+Wire Wire Line
+	6500 2925 6500 3075
+Connection ~ 5350 3250
+Wire Wire Line
+	5350 3250 5425 3250
+Wire Wire Line
+	5350 3450 5350 3850
+Wire Wire Line
+	5350 3850 6500 3850
+Wire Wire Line
+	6500 3850 6500 3675
+Connection ~ 5350 3450
+Wire Wire Line
+	5350 3450 5425 3450
+NoConn ~ 6400 3675
+NoConn ~ 6400 3075
+Wire Wire Line
+	4975 4800 5075 4800
+Wire Wire Line
+	4975 5000 5075 5000
+$Comp
+L Connector:DIN-5_180degree J6
+U 1 1 615139D5
+P 3750 4850
+F 0 "J6" V 3704 4620 50  0000 R CNN
+F 1 "DIN-5_180degree" V 3795 4620 50  0000 R CNN
+F 2 "lib:CUI_SD-50BV" H 3750 4850 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 3750 4850 50  0001 C CNN
+	1    3750 4850
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5075 4800 5075 4425
+Wire Wire Line
+	5075 4425 3650 4425
+Wire Wire Line
+	3650 4425 3650 4550
+Connection ~ 5075 4800
+Wire Wire Line
+	5075 4800 5725 4800
+Wire Wire Line
+	5075 5000 5075 5300
+Wire Wire Line
+	5075 5300 3650 5300
+Wire Wire Line
+	3650 5300 3650 5150
+Connection ~ 5075 5000
+Wire Wire Line
+	5075 5000 5775 5000
+NoConn ~ 3750 5150
+NoConn ~ 3750 4550
+NoConn ~ 3450 4850
+Wire Wire Line
+	7325 5000 7575 5000
+Text GLabel 7575 5000 2    50   Input ~ 0
+MIDI_RX
+Wire Wire Line
+	6275 5200 6725 5200
+Wire Wire Line
+	6625 5000 6625 4800
+Wire Wire Line
+	6725 5000 6625 5000
+$Comp
+L Isolator:6N137 U8
+U 1 1 5EE5AB46
+P 7025 5000
+AR Path="/5EE2DB57/5EE5AB46" Ref="U8"  Part="1" 
+AR Path="/5F736ED6/5EE5AB46" Ref="U?"  Part="1" 
+F 0 "U8" H 7025 5467 50  0000 C CNN
+F 1 "6N137" H 7025 5376 50  0000 C CNN
+F 2 "Package_DIP:SMDIP-8_W9.53mm" H 7025 4500 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-0940EN" H 6175 5550 50  0001 C CNN
+	1    7025 5000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

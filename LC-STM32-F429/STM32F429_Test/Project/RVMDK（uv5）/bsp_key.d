@@ -1,0 +1,9 @@
+.\bsp_key.o: ..\..\User\key\bsp_key.c
+.\bsp_key.o: ..\..\User\key\bsp_key.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm4.h
+.\bsp_key.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm4_simd.h
+.\bsp_key.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h

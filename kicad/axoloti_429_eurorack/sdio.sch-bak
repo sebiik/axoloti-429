@@ -1,0 +1,245 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 9
+Title ""
+Date "2021-07-14"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 2350 2100 0    50   Input ~ 0
+SDIO_D0
+Text GLabel 2350 2200 0    50   Input ~ 0
+SDIO_D1
+Text GLabel 2350 2300 0    50   Input ~ 0
+SDIO_D2
+Text GLabel 2350 2400 0    50   Input ~ 0
+SDIO_D3
+Text GLabel 2400 2700 0    50   Input ~ 0
+SDIO_CMD
+Text GLabel 2350 2900 0    50   Input ~ 0
+SDIO_CK
+Wire Wire Line
+	2350 2900 4850 2900
+Wire Wire Line
+	2400 2700 3900 2700
+Wire Wire Line
+	2850 3100 4150 3100
+Wire Wire Line
+	2350 2200 2750 2200
+Wire Wire Line
+	2750 3200 4400 3200
+Wire Wire Line
+	2350 2300 2650 2300
+Wire Wire Line
+	2650 2300 2650 2500
+Wire Wire Line
+	2350 2400 2550 2400
+Wire Wire Line
+	2550 2400 2550 2600
+Wire Wire Line
+	2550 2600 3650 2600
+Wire Wire Line
+	1350 3175 1350 3100
+Wire Wire Line
+	1350 2800 4850 2800
+$Comp
+L Device:CP C39
+U 1 1 5F750B90
+P 1350 2950
+F 0 "C39" H 1468 2996 50  0000 L CNN
+F 1 "10u" H 1468 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 1388 2800 50  0001 C CNN
+F 3 "~" H 1350 2950 50  0001 C CNN
+	1    1350 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 2800
+Wire Wire Line
+	2500 3100 2500 3000
+Wire Wire Line
+	2500 3000 4850 3000
+$Comp
+L Device:R R30
+U 1 1 5F753A6C
+P 3400 2050
+F 0 "R30" H 3470 2096 50  0000 L CNN
+F 1 "47k" H 3470 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3330 2050 50  0001 C CNN
+F 3 "~" H 3400 2050 50  0001 C CNN
+	1    3400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 5F757136
+P 3650 2050
+F 0 "R31" H 3720 2096 50  0000 L CNN
+F 1 "47k" H 3720 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 2050 50  0001 C CNN
+F 3 "~" H 3650 2050 50  0001 C CNN
+	1    3650 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R32
+U 1 1 5F75727F
+P 3900 2050
+F 0 "R32" H 3970 2096 50  0000 L CNN
+F 1 "47k" H 3970 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3830 2050 50  0001 C CNN
+F 3 "~" H 3900 2050 50  0001 C CNN
+	1    3900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R33
+U 1 1 5F757554
+P 4150 2050
+F 0 "R33" H 4220 2096 50  0000 L CNN
+F 1 "47k" H 4220 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 2050 50  0001 C CNN
+F 3 "~" H 4150 2050 50  0001 C CNN
+	1    4150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 5F7577B3
+P 4400 2050
+F 0 "R34" H 4470 2096 50  0000 L CNN
+F 1 "47k" H 4470 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4330 2050 50  0001 C CNN
+F 3 "~" H 4400 2050 50  0001 C CNN
+	1    4400 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 2600
+Wire Wire Line
+	3650 2600 4850 2600
+Wire Wire Line
+	2650 2500 3400 2500
+Connection ~ 3400 2500
+Wire Wire Line
+	3400 2500 4850 2500
+Connection ~ 3900 2700
+Wire Wire Line
+	3900 2700 4850 2700
+Connection ~ 4150 3100
+Wire Wire Line
+	4150 3100 4850 3100
+Connection ~ 4400 3200
+Wire Wire Line
+	4400 3200 4850 3200
+$Comp
+L power:+3.3V #PWR0111
+U 1 1 5F75AFEC
+P 3900 1650
+F 0 "#PWR0111" H 3900 1500 50  0001 C CNN
+F 1 "+3.3V" H 3915 1823 50  0000 C CNN
+F 2 "" H 3900 1650 50  0001 C CNN
+F 3 "" H 3900 1650 50  0001 C CNN
+	1    3900 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1900 3400 1750
+Wire Wire Line
+	3400 1750 3650 1750
+Wire Wire Line
+	3900 1750 3900 1650
+Wire Wire Line
+	3900 1750 4150 1750
+Wire Wire Line
+	4400 1750 4400 1900
+Connection ~ 3900 1750
+Wire Wire Line
+	3650 1900 3650 1750
+Connection ~ 3650 1750
+Wire Wire Line
+	3650 1750 3900 1750
+Wire Wire Line
+	3900 1900 3900 1750
+Wire Wire Line
+	4150 1900 4150 1750
+Connection ~ 4150 1750
+Wire Wire Line
+	4150 1750 4400 1750
+$Comp
+L Connector:Micro_SD_Card J14
+U 1 1 60ED5AD5
+P 5750 2800
+F 0 "J14" H 5700 3517 50  0000 C CNN
+F 1 "Micro_SD_Card" H 5700 3426 50  0000 C CNN
+F 2 "w_connector:PJS008U-3000-0" H 6900 3100 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 5750 2800 50  0001 C CNN
+	1    5750 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 3100
+Wire Wire Line
+	1350 3100 2500 3100
+Wire Wire Line
+	2750 2200 2750 3200
+Wire Wire Line
+	2850 2100 2850 3100
+Wire Wire Line
+	4150 2200 4150 3100
+Wire Wire Line
+	4400 2200 4400 3200
+Wire Wire Line
+	3400 2200 3400 2500
+Wire Wire Line
+	3650 2200 3650 2600
+Wire Wire Line
+	3900 2200 3900 2700
+Wire Wire Line
+	2350 2100 2850 2100
+$Comp
+L power:GND #PWR0112
+U 1 1 60EE976D
+P 6650 3525
+F 0 "#PWR0112" H 6650 3275 50  0001 C CNN
+F 1 "GND" H 6655 3352 50  0000 C CNN
+F 2 "" H 6650 3525 50  0001 C CNN
+F 3 "" H 6650 3525 50  0001 C CNN
+	1    6650 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3525 6650 3400
+Wire Wire Line
+	6650 3400 6550 3400
+Wire Wire Line
+	1350 2600 1350 2800
+$Comp
+L power:GND #PWR0113
+U 1 1 60EED3F9
+P 1350 3175
+F 0 "#PWR0113" H 1350 2925 50  0001 C CNN
+F 1 "GND" H 1355 3002 50  0000 C CNN
+F 2 "" H 1350 3175 50  0001 C CNN
+F 3 "" H 1350 3175 50  0001 C CNN
+	1    1350 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0114
+U 1 1 60EEDBD6
+P 1350 2600
+F 0 "#PWR0114" H 1350 2450 50  0001 C CNN
+F 1 "+3.3V" H 1365 2773 50  0000 C CNN
+F 2 "" H 1350 2600 50  0001 C CNN
+F 3 "" H 1350 2600 50  0001 C CNN
+	1    1350 2600
+	1    0    0    -1  
+$EndComp
+Text Notes 5300 1075 0    79   ~ 0
+SD CARD
+$EndSCHEMATC
