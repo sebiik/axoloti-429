@@ -682,21 +682,6 @@ $EndComp
 Text Notes 1100 4950 0    79   ~ 0
 VOLTAGE REFERENCES
 $Comp
-L Device:R R60
-U 1 1 61899606
-P 2225 5675
-F 0 "R60" V 2125 5675 50  0000 C CNN
-F 1 "100k" V 2225 5675 50  0000 C CNN
-F 2 "" V 2155 5675 50  0001 C CNN
-F 3 "~" H 2225 5675 50  0001 C CNN
-	1    2225 5675
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2025 5675 2075 5675
-Wire Wire Line
-	2375 5675 2450 5675
-$Comp
 L Amplifier_Operational:TL074 U12
 U 4 1 61872691
 P 2825 5775
@@ -707,58 +692,19 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2875 5975 50  0001 C CNN
 	4    2825 5775
 	1    0    0    1   
 $EndComp
-$Comp
-L Device:R R61
-U 1 1 618C6C3F
-P 2750 5400
-F 0 "R61" V 2650 5400 50  0000 C CNN
-F 1 "30k" V 2750 5400 50  0000 C CNN
-F 2 "" V 2680 5400 50  0001 C CNN
-F 3 "~" H 2750 5400 50  0001 C CNN
-	1    2750 5400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2600 5400 2450 5400
 Wire Wire Line
 	2450 5400 2450 5675
-Connection ~ 2450 5675
 Wire Wire Line
 	2450 5675 2525 5675
-Wire Wire Line
-	2900 5400 3225 5400
 Wire Wire Line
 	3225 5400 3225 5775
 Wire Wire Line
 	3225 5775 3125 5775
-$Comp
-L power:GND #PWR?
-U 1 1 618CD27B
-P 2450 5950
-AR Path="/5ED86ED4/618CD27B" Ref="#PWR?"  Part="1" 
-AR Path="/60EEB191/618CD27B" Ref="#PWR039"  Part="1" 
-F 0 "#PWR039" H 2450 5700 50  0001 C CNN
-F 1 "GND" H 2455 5777 50  0000 C CNN
-F 2 "" H 2450 5950 50  0001 C CNN
-F 3 "" H 2450 5950 50  0001 C CNN
-	1    2450 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 5950 2450 5875
-Wire Wire Line
-	2450 5875 2525 5875
 Text GLabel 3625 5775 2    50   Input ~ 0
-AREF_3V0
+AREF_3V3
 Wire Wire Line
 	3225 5775 3350 5775
 Connection ~ 3225 5775
-Wire Wire Line
-	1250 5675 1250 5525
-Wire Wire Line
-	1250 5525 2025 5525
-Wire Wire Line
-	2025 5525 2025 5675
 $Comp
 L Device:C_Small C63
 U 1 1 619008A5
@@ -1160,7 +1106,7 @@ P 3525 5925
 AR Path="/60F8E344" Ref="C?"  Part="1" 
 AR Path="/60EEB191/60F8E344" Ref="C82"  Part="1" 
 F 0 "C82" H 3617 5971 50  0000 L CNN
-F 1 "100n" H 3617 5880 50  0000 L CNN
+F 1 "10n" H 3617 5880 50  0000 L CNN
 F 2 "" H 3525 5925 50  0001 C CNN
 F 3 "~" H 3525 5925 50  0001 C CNN
 	1    3525 5925
@@ -1544,7 +1490,7 @@ L Device:R R127
 U 1 1 6285B03F
 P 8725 4675
 F 0 "R127" V 8518 4675 50  0000 C CNN
-F 1 "30k" V 8609 4675 50  0000 C CNN
+F 1 "33k" V 8609 4675 50  0000 C CNN
 F 2 "" V 8655 4675 50  0001 C CNN
 F 3 "~" H 8725 4675 50  0001 C CNN
 	1    8725 4675
@@ -1698,7 +1644,7 @@ L Device:R R131
 U 1 1 628FE321
 P 8725 5925
 F 0 "R131" V 8518 5925 50  0000 C CNN
-F 1 "30k" V 8609 5925 50  0000 C CNN
+F 1 "33k" V 8609 5925 50  0000 C CNN
 F 2 "" V 8655 5925 50  0001 C CNN
 F 3 "~" H 8725 5925 50  0001 C CNN
 	1    8725 5925
@@ -1807,7 +1753,7 @@ F 3 "~" H 6125 1525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7725 5175 0    50   ~ 0
-0…3V to -5.25…5.25V
+0…3.3V to -5.25…5.25V
 Text GLabel 8250 2050 0    50   Input ~ 0
 SPI2_74HC595_EN
 Wire Wire Line
@@ -1816,4 +1762,428 @@ Text GLabel 8250 1750 0    50   Input ~ 0
 SPI2_74HC595_SCLK
 Text GLabel 8250 1550 0    50   Input ~ 0
 SPI2_74HC595_DATA
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 619B81C5
+P 2275 5850
+AR Path="/619B81C5" Ref="#PWR?"  Part="1" 
+AR Path="/5ED86ED4/619B81C5" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/619B81C5" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 2275 5700 50  0001 C CNN
+F 1 "+3.3VA" H 2290 6023 50  0000 C CNN
+F 2 "" H 2275 5850 50  0001 C CNN
+F 3 "" H 2275 5850 50  0001 C CNN
+	1    2275 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5400 3225 5400
+Wire Wire Line
+	2275 5850 2275 5875
+Wire Wire Line
+	2275 5875 2525 5875
+Text Notes 2425 6125 0    50   ~ 0
+unity gain buffer
+Text Notes 2500 5325 0    50   ~ 0
+need separate 3v3 reference since\nVDDA not broken out on LCtech board
+Text Notes 7725 4925 0    50   ~ 0
+TODO: re-check levels
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61A3205B
+P 4450 5250
+AR Path="/61A3205B" Ref="#PWR?"  Part="1" 
+AR Path="/5EFC127A/61A3205B" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A3205B" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 4450 5100 50  0001 C CNN
+F 1 "+3.3V" H 4465 5423 50  0000 C CNN
+F 2 "" H 4450 5250 50  0001 C CNN
+F 3 "" H 4450 5250 50  0001 C CNN
+	1    4450 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A32061
+P 4450 5400
+AR Path="/61A32061" Ref="R?"  Part="1" 
+AR Path="/60EEB191/61A32061" Ref="R58"  Part="1" 
+F 0 "R58" H 4520 5446 50  0000 L CNN
+F 1 "10k" H 4520 5355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 5400 50  0001 C CNN
+F 3 "~" H 4450 5400 50  0001 C CNN
+	1    4450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A32067
+P 4450 6100
+AR Path="/61A32067" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A32067" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 4450 5850 50  0001 C CNN
+F 1 "GND" H 4455 5927 50  0000 C CNN
+F 2 "" H 4450 6100 50  0001 C CNN
+F 3 "" H 4450 6100 50  0001 C CNN
+	1    4450 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW?
+U 1 1 61A3206D
+P 4450 5825
+AR Path="/61A3206D" Ref="SW?"  Part="1" 
+AR Path="/60EEB191/61A3206D" Ref="SW3"  Part="1" 
+F 0 "SW3" V 4496 5737 50  0000 R CNN
+F 1 "BUTTON1" V 4450 5875 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 4450 6125 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 4450 6125 50  0001 C CNN
+	1    4450 5825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 6025 4450 6050
+Wire Wire Line
+	4450 5550 4450 5600
+Wire Wire Line
+	4350 6025 4350 6050
+Wire Wire Line
+	4350 6050 4450 6050
+Connection ~ 4450 6050
+Wire Wire Line
+	4350 5625 4350 5600
+Wire Wire Line
+	4350 5600 4450 5600
+Connection ~ 4450 5600
+Wire Wire Line
+	4450 5600 4450 5625
+Wire Wire Line
+	4450 6050 4450 6100
+Wire Wire Line
+	4875 5600 4750 5600
+$Comp
+L Device:C_Small C?
+U 1 1 61A3207F
+P 4750 5900
+AR Path="/61A3207F" Ref="C?"  Part="1" 
+AR Path="/60EEB191/61A3207F" Ref="C33"  Part="1" 
+F 0 "C33" H 4842 5946 50  0000 L CNN
+F 1 "100n" H 4842 5855 50  0000 L CNN
+F 2 "" H 4750 5900 50  0001 C CNN
+F 3 "~" H 4750 5900 50  0001 C CNN
+	1    4750 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6000 4750 6050
+Wire Wire Line
+	4750 6050 4450 6050
+Wire Wire Line
+	4750 5800 4750 5600
+Connection ~ 4750 5600
+Wire Wire Line
+	4750 5600 4450 5600
+Text GLabel 4875 5600 1    50   Input ~ 0
+BUTTON1
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61A46F9F
+P 5275 5225
+AR Path="/61A46F9F" Ref="#PWR?"  Part="1" 
+AR Path="/5EFC127A/61A46F9F" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A46F9F" Ref="#PWR083"  Part="1" 
+F 0 "#PWR083" H 5275 5075 50  0001 C CNN
+F 1 "+3.3V" H 5290 5398 50  0000 C CNN
+F 2 "" H 5275 5225 50  0001 C CNN
+F 3 "" H 5275 5225 50  0001 C CNN
+	1    5275 5225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A46FA5
+P 5275 5375
+AR Path="/61A46FA5" Ref="R?"  Part="1" 
+AR Path="/60EEB191/61A46FA5" Ref="R60"  Part="1" 
+F 0 "R60" H 5345 5421 50  0000 L CNN
+F 1 "10k" H 5345 5330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5205 5375 50  0001 C CNN
+F 3 "~" H 5275 5375 50  0001 C CNN
+	1    5275 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A46FAB
+P 5275 6075
+AR Path="/61A46FAB" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A46FAB" Ref="#PWR084"  Part="1" 
+F 0 "#PWR084" H 5275 5825 50  0001 C CNN
+F 1 "GND" H 5280 5902 50  0000 C CNN
+F 2 "" H 5275 6075 50  0001 C CNN
+F 3 "" H 5275 6075 50  0001 C CNN
+	1    5275 6075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW?
+U 1 1 61A46FB1
+P 5275 5800
+AR Path="/61A46FB1" Ref="SW?"  Part="1" 
+AR Path="/60EEB191/61A46FB1" Ref="SW4"  Part="1" 
+F 0 "SW4" V 5321 5712 50  0000 R CNN
+F 1 "BUTTON2" V 5275 5850 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 5275 6100 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5275 6100 50  0001 C CNN
+	1    5275 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5275 6000 5275 6025
+Wire Wire Line
+	5275 5525 5275 5575
+Wire Wire Line
+	5175 6000 5175 6025
+Wire Wire Line
+	5175 6025 5275 6025
+Connection ~ 5275 6025
+Wire Wire Line
+	5175 5600 5175 5575
+Wire Wire Line
+	5175 5575 5275 5575
+Connection ~ 5275 5575
+Wire Wire Line
+	5275 5575 5275 5600
+Wire Wire Line
+	5275 6025 5275 6075
+Wire Wire Line
+	5700 5575 5575 5575
+$Comp
+L Device:C_Small C?
+U 1 1 61A46FC2
+P 5575 5875
+AR Path="/61A46FC2" Ref="C?"  Part="1" 
+AR Path="/60EEB191/61A46FC2" Ref="C34"  Part="1" 
+F 0 "C34" H 5667 5921 50  0000 L CNN
+F 1 "100n" H 5667 5830 50  0000 L CNN
+F 2 "" H 5575 5875 50  0001 C CNN
+F 3 "~" H 5575 5875 50  0001 C CNN
+	1    5575 5875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5575 5975 5575 6025
+Wire Wire Line
+	5575 6025 5275 6025
+Wire Wire Line
+	5575 5775 5575 5575
+Connection ~ 5575 5575
+Wire Wire Line
+	5575 5575 5275 5575
+Text GLabel 5700 5575 1    50   Input ~ 0
+BUTTON2
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61A58E33
+P 6000 5225
+AR Path="/61A58E33" Ref="#PWR?"  Part="1" 
+AR Path="/5EFC127A/61A58E33" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A58E33" Ref="#PWR085"  Part="1" 
+F 0 "#PWR085" H 6000 5075 50  0001 C CNN
+F 1 "+3.3V" H 6015 5398 50  0000 C CNN
+F 2 "" H 6000 5225 50  0001 C CNN
+F 3 "" H 6000 5225 50  0001 C CNN
+	1    6000 5225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A58E39
+P 6000 5375
+AR Path="/61A58E39" Ref="R?"  Part="1" 
+AR Path="/60EEB191/61A58E39" Ref="R61"  Part="1" 
+F 0 "R61" H 6070 5421 50  0000 L CNN
+F 1 "10k" H 6070 5330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5930 5375 50  0001 C CNN
+F 3 "~" H 6000 5375 50  0001 C CNN
+	1    6000 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A58E3F
+P 6000 6075
+AR Path="/61A58E3F" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A58E3F" Ref="#PWR086"  Part="1" 
+F 0 "#PWR086" H 6000 5825 50  0001 C CNN
+F 1 "GND" H 6005 5902 50  0000 C CNN
+F 2 "" H 6000 6075 50  0001 C CNN
+F 3 "" H 6000 6075 50  0001 C CNN
+	1    6000 6075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW?
+U 1 1 61A58E45
+P 6000 5800
+AR Path="/61A58E45" Ref="SW?"  Part="1" 
+AR Path="/60EEB191/61A58E45" Ref="SW5"  Part="1" 
+F 0 "SW5" V 6046 5712 50  0000 R CNN
+F 1 "BUTTON3" V 6000 5850 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 6000 6100 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 6000 6100 50  0001 C CNN
+	1    6000 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 6000 6000 6025
+Wire Wire Line
+	6000 5525 6000 5575
+Wire Wire Line
+	5900 6000 5900 6025
+Wire Wire Line
+	5900 6025 6000 6025
+Connection ~ 6000 6025
+Wire Wire Line
+	5900 5600 5900 5575
+Wire Wire Line
+	5900 5575 6000 5575
+Connection ~ 6000 5575
+Wire Wire Line
+	6000 5575 6000 5600
+Wire Wire Line
+	6000 6025 6000 6075
+Wire Wire Line
+	6425 5575 6300 5575
+$Comp
+L Device:C_Small C?
+U 1 1 61A58E56
+P 6300 5875
+AR Path="/61A58E56" Ref="C?"  Part="1" 
+AR Path="/60EEB191/61A58E56" Ref="C35"  Part="1" 
+F 0 "C35" H 6392 5921 50  0000 L CNN
+F 1 "100n" H 6392 5830 50  0000 L CNN
+F 2 "" H 6300 5875 50  0001 C CNN
+F 3 "~" H 6300 5875 50  0001 C CNN
+	1    6300 5875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 5975 6300 6025
+Wire Wire Line
+	6300 6025 6000 6025
+Wire Wire Line
+	6300 5775 6300 5575
+Connection ~ 6300 5575
+Wire Wire Line
+	6300 5575 6000 5575
+Text GLabel 6425 5575 1    50   Input ~ 0
+BUTTON3
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61A6D1A5
+P 6700 5225
+AR Path="/61A6D1A5" Ref="#PWR?"  Part="1" 
+AR Path="/5EFC127A/61A6D1A5" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A6D1A5" Ref="#PWR087"  Part="1" 
+F 0 "#PWR087" H 6700 5075 50  0001 C CNN
+F 1 "+3.3V" H 6715 5398 50  0000 C CNN
+F 2 "" H 6700 5225 50  0001 C CNN
+F 3 "" H 6700 5225 50  0001 C CNN
+	1    6700 5225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A6D1AB
+P 6700 5375
+AR Path="/61A6D1AB" Ref="R?"  Part="1" 
+AR Path="/60EEB191/61A6D1AB" Ref="R102"  Part="1" 
+F 0 "R102" H 6770 5421 50  0000 L CNN
+F 1 "10k" H 6770 5330 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5375 50  0001 C CNN
+F 3 "~" H 6700 5375 50  0001 C CNN
+	1    6700 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A6D1B1
+P 6700 6075
+AR Path="/61A6D1B1" Ref="#PWR?"  Part="1" 
+AR Path="/60EEB191/61A6D1B1" Ref="#PWR089"  Part="1" 
+F 0 "#PWR089" H 6700 5825 50  0001 C CNN
+F 1 "GND" H 6705 5902 50  0000 C CNN
+F 2 "" H 6700 6075 50  0001 C CNN
+F 3 "" H 6700 6075 50  0001 C CNN
+	1    6700 6075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_MEC_5E SW?
+U 1 1 61A6D1B7
+P 6700 5800
+AR Path="/61A6D1B7" Ref="SW?"  Part="1" 
+AR Path="/60EEB191/61A6D1B7" Ref="SW6"  Part="1" 
+F 0 "SW6" V 6746 5712 50  0000 R CNN
+F 1 "BUTTON4" V 6700 5850 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 6700 6100 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 6700 6100 50  0001 C CNN
+	1    6700 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 6000 6700 6025
+Wire Wire Line
+	6700 5525 6700 5575
+Wire Wire Line
+	6600 6000 6600 6025
+Wire Wire Line
+	6600 6025 6700 6025
+Connection ~ 6700 6025
+Wire Wire Line
+	6600 5600 6600 5575
+Wire Wire Line
+	6600 5575 6700 5575
+Connection ~ 6700 5575
+Wire Wire Line
+	6700 5575 6700 5600
+Wire Wire Line
+	6700 6025 6700 6075
+Wire Wire Line
+	7125 5575 7000 5575
+$Comp
+L Device:C_Small C?
+U 1 1 61A6D1C8
+P 7000 5875
+AR Path="/61A6D1C8" Ref="C?"  Part="1" 
+AR Path="/60EEB191/61A6D1C8" Ref="C36"  Part="1" 
+F 0 "C36" H 7092 5921 50  0000 L CNN
+F 1 "100n" H 7092 5830 50  0000 L CNN
+F 2 "" H 7000 5875 50  0001 C CNN
+F 3 "~" H 7000 5875 50  0001 C CNN
+	1    7000 5875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5975 7000 6025
+Wire Wire Line
+	7000 6025 6700 6025
+Wire Wire Line
+	7000 5775 7000 5575
+Connection ~ 7000 5575
+Wire Wire Line
+	7000 5575 6700 5575
+Text GLabel 7125 5575 1    50   Input ~ 0
+BUTTON4
+Text Notes 5325 4950 0    79   ~ 0
+SOFT BUTTONS
+Wire Notes Line
+	4200 4800 4200 6350
+Wire Notes Line
+	4200 6350 7250 6350
+Wire Notes Line
+	7250 6350 7250 4800
+Wire Notes Line
+	7250 4800 4200 4800
 $EndSCHEMATC
