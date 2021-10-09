@@ -255,14 +255,14 @@ Text GLabel 12000 6925 2    50   Input ~ 0
 SDIO_CMD
 Wire Wire Line
 	12000 6925 11775 6925
-Text GLabel -2200 11800 0    50   Input ~ 0
+Text GLabel -850 10200 2    50   Input ~ 0
 DAC_OUT1
 Wire Wire Line
-	-2200 11800 -2100 11800
-Text GLabel -700 11700 2    50   Input ~ 0
+	-850 10200 -950 10200
+Text GLabel -2350 10300 0    50   Input ~ 0
 DAC_OUT2
 Wire Wire Line
-	-800 11700 -700 11700
+	-2250 10300 -2350 10300
 Text GLabel 11875 2725 2    50   Input ~ 0
 OTG_FS_DM
 Text GLabel 11875 2825 2    50   Input ~ 0
@@ -398,7 +398,7 @@ Text GLabel -3775 12200 2    50   Input ~ 0
 CV_IN2
 Text GLabel -5325 12200 0    50   Input ~ 0
 CV_IN3
-Text GLabel -675 11800 2    50   Input ~ 0
+Text GLabel -2375 10200 0    50   Input ~ 0
 CV_IN4
 Text GLabel 11900 2225 2    50   Input ~ 0
 CV_IN5
@@ -409,7 +409,7 @@ Wire Wire Line
 Wire Wire Line
 	-5325 12200 -5200 12200
 Wire Wire Line
-	-800 11800 -675 11800
+	-2250 10200 -2375 10200
 Wire Wire Line
 	11775 2225 11900 2225
 Wire Wire Line
@@ -549,14 +549,14 @@ Wire Wire Line
 	-4525 8375 -4375 8375
 Text Notes 15325 2400 0    50   ~ 0
 done
-Text GLabel -2400 10500 0    50   Input ~ 0
+Text GLabel -650 11500 2    50   Input ~ 0
 LED_RED
 Wire Wire Line
-	-2400 10500 -2100 10500
-Text GLabel -2350 10600 0    50   Input ~ 0
+	-650 11500 -950 11500
+Text GLabel -700 11400 2    50   Input ~ 0
 LED_GREEN
 Wire Wire Line
-	-2350 10600 -2100 10600
+	-700 11400 -950 11400
 Text GLabel 11875 2425 2    50   Input ~ 0
 SAI_MCLK
 Wire Wire Line
@@ -672,59 +672,48 @@ $EndComp
 $Comp
 L power:GND #PWR0146
 U 1 1 616899AD
-P -2375 12100
-F 0 "#PWR0146" H -2375 11850 50  0001 C CNN
-F 1 "GND" V -2370 11972 50  0000 R CNN
-F 2 "" H -2375 12100 50  0001 C CNN
-F 3 "" H -2375 12100 50  0001 C CNN
-	1    -2375 12100
-	0    1    1    0   
+P -675 9900
+F 0 "#PWR0146" H -675 9650 50  0001 C CNN
+F 1 "GND" V -670 9772 50  0000 R CNN
+F 2 "" H -675 9900 50  0001 C CNN
+F 3 "" H -675 9900 50  0001 C CNN
+	1    -675 9900
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	-2375 12100 -2100 12100
+	-675 9900 -950 9900
 $Comp
 L power:+3.3V #PWR0147
 U 1 1 616BAD54
-P -2375 12200
-F 0 "#PWR0147" H -2375 12050 50  0001 C CNN
-F 1 "+3.3V" V -2360 12328 50  0000 L CNN
-F 2 "" H -2375 12200 50  0001 C CNN
-F 3 "" H -2375 12200 50  0001 C CNN
-	1    -2375 12200
-	0    -1   -1   0   
+P -675 9800
+F 0 "#PWR0147" H -675 9650 50  0001 C CNN
+F 1 "+3.3V" V -660 9928 50  0000 L CNN
+F 2 "" H -675 9800 50  0001 C CNN
+F 3 "" H -675 9800 50  0001 C CNN
+	1    -675 9800
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	-2375 12200 -2100 12200
+	-675 9800 -950 9800
 $Comp
 L power:+5V #PWR0148
 U 1 1 616EEC4D
-P -2375 12300
-F 0 "#PWR0148" H -2375 12150 50  0001 C CNN
-F 1 "+5V" V -2360 12428 50  0000 L CNN
-F 2 "" H -2375 12300 50  0001 C CNN
-F 3 "" H -2375 12300 50  0001 C CNN
-	1    -2375 12300
-	0    -1   -1   0   
+P -675 9700
+F 0 "#PWR0148" H -675 9550 50  0001 C CNN
+F 1 "+5V" V -660 9828 50  0000 L CNN
+F 2 "" H -675 9700 50  0001 C CNN
+F 3 "" H -675 9700 50  0001 C CNN
+	1    -675 9700
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	-2375 12300 -2100 12300
+	-675 9700 -950 9700
 Text GLabel -3625 9800 2    50   Input ~ 0
 VBAT
 Text GLabel -5475 11800 0    50   Input ~ 0
 V_SUPERVIS
 Wire Wire Line
 	-5475 11800 -5200 11800
-$Comp
-L w_connector:429_Conn_02x27_Odd_Even_mirrored J30
-U 1 1 617A73CC
-P -1450 11000
-F 0 "J30" H -1450 12517 50  0000 C CNN
-F 1 "429_Conn_02x27_Odd_Even_mirrored" H -1450 12426 50  0000 C CNN
-F 2 "" H -1200 11000 50  0001 C CNN
-F 3 "~" H -1200 11000 50  0001 C CNN
-	1    -1450 11000
-	1    0    0    -1  
-$EndComp
 Text GLabel -4375 8375 2    50   Input ~ 0
 V_SUPERVIS
 Wire Wire Line
@@ -745,43 +734,43 @@ F 3 "~" H -4300 11000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	-525 12300 -800 12300
+	-2525 9700 -2250 9700
 $Comp
 L power:+5V #PWR0152
 U 1 1 61707F5F
-P -525 12300
-F 0 "#PWR0152" H -525 12150 50  0001 C CNN
-F 1 "+5V" V -510 12428 50  0000 L CNN
-F 2 "" H -525 12300 50  0001 C CNN
-F 3 "" H -525 12300 50  0001 C CNN
-	1    -525 12300
-	0    1    1    0   
+P -2525 9700
+F 0 "#PWR0152" H -2525 9550 50  0001 C CNN
+F 1 "+5V" V -2510 9828 50  0000 L CNN
+F 2 "" H -2525 9700 50  0001 C CNN
+F 3 "" H -2525 9700 50  0001 C CNN
+	1    -2525 9700
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	-525 12200 -800 12200
+	-2525 9800 -2250 9800
 $Comp
 L power:+3.3V #PWR0151
 U 1 1 616D3BDC
-P -525 12200
-F 0 "#PWR0151" H -525 12050 50  0001 C CNN
-F 1 "+3.3V" V -510 12328 50  0000 L CNN
-F 2 "" H -525 12200 50  0001 C CNN
-F 3 "" H -525 12200 50  0001 C CNN
-	1    -525 12200
-	0    1    1    0   
+P -2525 9800
+F 0 "#PWR0151" H -2525 9650 50  0001 C CNN
+F 1 "+3.3V" V -2510 9928 50  0000 L CNN
+F 2 "" H -2525 9800 50  0001 C CNN
+F 3 "" H -2525 9800 50  0001 C CNN
+	1    -2525 9800
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	-525 12100 -800 12100
+	-2525 9900 -2250 9900
 $Comp
 L power:GND #PWR0150
 U 1 1 616A1448
-P -525 12100
-F 0 "#PWR0150" H -525 11850 50  0001 C CNN
-F 1 "GND" V -520 11972 50  0000 R CNN
-F 2 "" H -525 12100 50  0001 C CNN
-F 3 "" H -525 12100 50  0001 C CNN
-	1    -525 12100
-	0    -1   -1   0   
+P -2525 9900
+F 0 "#PWR0150" H -2525 9650 50  0001 C CNN
+F 1 "GND" V -2520 9772 50  0000 R CNN
+F 2 "" H -2525 9900 50  0001 C CNN
+F 3 "" H -2525 9900 50  0001 C CNN
+	1    -2525 9900
+	0    1    1    0   
 $EndComp
 Text GLabel -5450 10600 0    50   Input ~ 0
 MIDI_TX
@@ -819,4 +808,15 @@ TODO
 Text Notes 375  5800 0    50   ~ 0
 LCtech already includes 10k pull down
 NoConn ~ -3900 11900
+$Comp
+L w_connector:429_Conn_02x27_Odd_Even_mirrored J30
+U 1 1 617A73CC
+P -1600 11000
+F 0 "J30" H -1600 12517 50  0000 C CNN
+F 1 "429_Conn_02x27_Odd_Even_mirrored" H -1600 12426 50  0000 C CNN
+F 2 "" H -1350 11000 50  0001 C CNN
+F 3 "~" H -1350 11000 50  0001 C CNN
+	1    -1600 11000
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
